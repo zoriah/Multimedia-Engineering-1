@@ -23,10 +23,11 @@
   -webkit-margin-after: 0;
   -webkit-margin-start: 0; }
 
-html {
+html, body {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   color: #000000;
-  background-color: #EEEEEE;
+  background-color: #34465d;
   margin: 0 auto;
   padding: 0; }
 
@@ -40,14 +41,13 @@ html {
 a {
   color: #FF7043;
   text-decoration: none;
-  border-bottom: 2px solid #FF7043;
   padding-left: 3px;
   padding-right: 3px;
   cursor: pointer; }
   a:hover {
-    color: #34465d;
+    color: #ff5d2a;
     text-decoration: none;
-    border-bottom: 2px solid #34465d;
+    border-bottom: 2px solid #ff5d2a;
     padding-left: 3px;
     padding-right: 3px; }
   a.icon {
@@ -67,7 +67,7 @@ h2 {
   font-size: 2.5em; }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2em; }
 
 i.info-icon {
@@ -77,6 +77,9 @@ i.info-icon {
 /* Coloring and Styling Elements
 -----------------------------------------------------------------------
 */
+.fa {
+  margin-right: 5px; }
+
 :focus {
   outline: 0; }
 
@@ -85,7 +88,7 @@ i.info-icon {
   filter: blur(3px); }
 
 .fx-transparent {
-  opacity: 0.5; }
+  opacity: 0.3; }
 
 .primary {
   color: #34465d; }
@@ -181,7 +184,7 @@ header.background-image {
 */
 header, section, footer {
   position: relative;
-  top: 55px;
+  top: 15px;
   margin: 0 auto;
   display: flex;
   justify-content: center; }
@@ -218,8 +221,7 @@ header, section, footer {
     .infocontainer.item.icon {
       width: 160px;
       height: 160px;
-      border-radius: 120px;
-      background-color: #34465d; }
+      border-radius: 120px; }
     .infocontainer.item.text {
       width: 280px;
       padding: 10px 0; }
@@ -237,18 +239,22 @@ header, section, footer {
 table {
   width: 100%;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  padding: 0 15px; }
 
 th {
-  background-color: #34465d;
+  background-color: #2b3a4d;
   color: white; }
+
+tr:hover {
+  background-color: #3d526d; }
 
 td,
 th {
   height: 50px;
   text-align: left;
   padding: 5px;
-  border-bottom: #d9d9d9 solid 1px; }
+  border-bottom: #4f6b8e solid 1px; }
 
 /* Input
 -----------------------------------------------------------------------
@@ -273,15 +279,15 @@ input.textfield {
   padding: 10px 15px;
   font-size: 1em;
   width: 280px;
-  background: #e1e1e1;
+  background: #c9d3e1;
   border: 0;
   position: relative;
   text-align: left;
   color: #34465d; }
   input.textfield:placeholder-shown {
-    color: #34465d !important; }
+    color: black !important; }
   input.textfield::-webkit-input-placeholder {
-    color: #34465d !important; }
+    color: black !important; }
 
 button.button {
   border: 0;

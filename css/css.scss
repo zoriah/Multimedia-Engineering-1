@@ -28,10 +28,11 @@ $highlight: #FF7043;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
 }
-html {
+html, body {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     color: $black;
-    background-color: $secondary;
+    background-color: $primary;
     margin: 0 auto;
     padding: 0;
     // width: 1440px;
@@ -46,14 +47,14 @@ html {
 a {
     color: $highlight;
     text-decoration: none;
-    border-bottom: 2px solid $highlight;
+    //border-bottom: 2px solid $highlight;
     padding-left: 3px;
     padding-right: 3px;
     cursor: pointer;
     &:hover {
-        color: $primary;
+        color: darken($highlight, 5%);
         text-decoration: none;
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid darken($highlight, 5%);
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -78,7 +79,7 @@ h2 {
 }
 h3 {
     // text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
 }
 i {
@@ -90,6 +91,9 @@ i {
 /* Coloring and Styling Elements
 -----------------------------------------------------------------------
 */
+.fa {
+    margin-right: 5px;
+}
 :focus {
     outline: 0;
 }
@@ -98,7 +102,7 @@ i {
     filter: blur(3px);
 }
 .fx-transparent {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .primary {
     color: $primary;
@@ -205,7 +209,7 @@ header {
 */
 header, section, footer {
     position: relative;
-    top: 55px;
+    top: 15px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -249,7 +253,6 @@ header, section, footer {
             width: 160px;
             height: 160px;
             border-radius: 120px;
-            background-color: $primary;
         }
         &.text {
             width: 280px;
@@ -272,17 +275,21 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    padding: 0 15px;
 }
 th {
-    background-color: $primary;
+    background-color: darken($primary, 5%);
     color: white;
+}
+tr:hover {
+    background-color: lighten($primary, 5%);
 }
 td,
 th {
     height: 50px;
     text-align: left;
     padding: 5px;
-    border-bottom: lighten($black, 85%) solid 1px;
+    border-bottom: lighten($primary, 15%) solid 1px;
 }
 /* Input
 -----------------------------------------------------------------------
@@ -313,7 +320,7 @@ input.textfield {
     padding: 10px 15px;
     font-size: 1em;
     width: 280px;
-    background: darken($secondary, 5%);
+    background: lighten($primary, 55%);
     border: 0;
     position: relative;
     // bottom: 2px;
@@ -324,10 +331,10 @@ input.textfield {
         // background-color: lighten($highlight, 85%);
     }
     &:placeholder-shown {
-        color: $primary !important;
+        color: darken($primary, 35%) !important;
     }
     &::-webkit-input-placeholder {
-        color: $primary !important;
+        color: darken($primary, 35%) !important;
     }
 }
 button.button {

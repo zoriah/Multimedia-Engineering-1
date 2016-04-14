@@ -8,134 +8,143 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Test Project</title>
-    <link rel="stylesheet" href="css/css.nested.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <script>
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Project</title>
+        <link rel="stylesheet" href="css/css.nested.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script></script>
+    </head>
 
-<body>
-    <div class="logo">
-        <h1 class="logo primary"><i class="fa fa-wifi highlight"></i> <b>WiFi <i>Hot</i>Spots</b> in Berlin</h1>
-    </div>
-    <header class="header-size background-image cut-top-bottom wrapper">
-        <div class="container">
-            <h2 class="header primary text-shadow"><b>Ridiculus Pellentesque</b> Adipiscing</h2>
-            <h3 class="header primary text-shadow">Cras justo odio, dapibus ac <b class="highlight">facilisis</b> in, egestas <b class="highlight">eget</b> quam. Curabitur blandit tempus porttitor.</h3>
+    <body>
+        <div class="logo">
+            <h1 class="logo secondary">
+                <i class="fa fa-wifi highlight"></i>
+                <b>WiFi
+                    <i>Hot</i>Spots</b>
+                in Berlin</h1>
         </div>
-    </header>
-
-    <content>
-        <section class="full-big-size secondary-background wrapper">
+        <header class="header-size background-image cut-top-bottom wrapper">
             <div class="container">
-                <div class="infocontainer">
-                    <div class="infocontainer item">
-                        <div class="infocontainer item icon cut-top-bottom">
-                            <i class="fa fa-map-marker fa-5x info-icon secondary"></i>
+                <h2 class="header secondary text-shadow">
+                    <b>Ridiculus Pellentesque</b>
+                    Adipiscing</h2>
+                <h3 class="header secondary text-shadow">Cras justo odio, dapibus ac
+                    <b class="highlight">facilisis</b>
+                    in, egestas
+                    <b class="highlight">eget</b>
+                    quam. Curabitur blandit tempus porttitor.</h3>
+            </div>
+        </header>
+
+        <content>
+            <section class="full-big-size primary-background wrapper">
+                <div class="container">
+                    <div class="infocontainer">
+                        <div class="infocontainer item">
+                            <div class="infocontainer item icon cut-top-bottom secondary-background">
+                                <i class="fa fa-map-marker fa-5x info-icon highlight"></i>
+                            </div>
+                            <p class="infocontainer item text secondary">Sed posuere consectetur est at lobortis.</p>
                         </div>
-                        <p class="infocontainer item text">Sed posuere consectetur est at lobortis.</p>
-                    </div>
-                    <div class="infocontainer item">
-                        <div class="infocontainer item icon cut-top-bottom">
-                            <i class="fa fa-cog fa-spin fa-5x info-icon secondary"></i>
+                        <div class="infocontainer item">
+                            <div class="infocontainer item icon cut-top-bottom secondary-background">
+                                <i class="fa fa-cog fa-spin fa-5x info-icon highlight"></i>
+                            </div>
+                            <p class="infocontainer item text secondary">Maecenas faucibus mollis interdum.</p>
                         </div>
-                        <p class="infocontainer item text">Maecenas faucibus mollis interdum.</p>
-                    </div>
-                    <div class="infocontainer item">
-                        <div class="infocontainer item icon cut-top-bottom">
-                            <i class="fa fa-refresh fa-spin fa-5x info-icon secondary"></i>
+                        <div class="infocontainer item">
+                            <div class="infocontainer item icon cut-top-bottom secondary-background">
+                                <i class="fa fa-refresh fa-spin fa-5x info-icon highlight"></i>
+                            </div>
+                            <p class="infocontainer item text secondary">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
                         </div>
-                        <p class="infocontainer item text">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="full-big-size highlight-background cut-top-bottom">
-            <form class="wrapper" method="post" action="" enctype="multipart/form-data">
-                <div class="container content-z">
-                    <h2 class="secondary">
-                    Suche jetzt einen
-                    <input class="big-search" name="Hotspot_Name" type="text" placeholder="Hotspots" />
-                    <button class="button button-search" name="submit" onclick="alert('Suche wurde mit '+Hotspot_Name+' gestartet.')">
-                    <i class="fa fa-search"></i>
-                    </button>
-                    </h2>
+            </section>
+            <section class="full-big-size highlight-background cut-top-bottom">
+                <form class="wrapper" method="post" action="" enctype="multipart/form-data">
+                    <div class="container content-z">
+                        <h2 class="secondary">
+                            Suche jetzt einen
+                            <input class="big-search" name="Hotspot_Name" type="text" placeholder="Hotspots"/>
+                            <button class="button button-search" name="submit" onclick="alert('Suche wurde mit '+Hotspot_Name+' gestartet.')">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </h2>
+                    </div>
+                </form>
+                <div class="search--background-image fx-transparent fx-blur"></div>
+            </section>
+            <section class="big-size primary-background wrapper">
+                <div class="container secondary">
+                    <table>
+                        <tr>
+                            <th>HotSpot Name</th>
+                            <th>SSID</th>
+                            <th>Password</th>
+                            <th>Location/Radius</th>
+                            <th>Contact</th>
+                            <th>Edit</th>
+                        </tr>
+                        <tr>
+                            <td>See Straßen Hotspot</td>
+                            <td>
+                                <i class="fa fa-wifi"></i>Testoarma in da Hood</td>
+                            <td>
+                                <a onclick="alert('Password verbergen')">
+                                    <i class="fa fa-unlock"></i>zwDH7CxzVY:ZayVd</a>
+                            </td>
+                            <td>
+                                <a onclick="alert('Google Karte anzeigen')">
+                                    <i class="fa fa-map-marker"></i>Location</a>
+                            </td>
+                            <td>
+                                <a onclick="alert('Email an die Person')">
+                                    <i class="fa fa-user"></i>Vorname Nachname</a>
+                            </td>
+                            <td>
+                                <a class="icon" onclick="alert('Edit Popup')">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum</td>
+                            <td>
+                                <i class="fa fa-wifi"></i>Testoarma in da Hood</td>
+                            <td>
+                                <a onclick="alert('Password anzeigen')">
+                                    <i class="fa fa-lock"></i>******</a>
+                            </td>
+                            <td>
+                                <a onclick="alert('Google Karte anzeigen')">
+                                    <i class="fa fa-map-marker"></i>Location</a>
+                            </td>
+                            <td>
+                                <a onclick="alert('Email an die Person')">
+                                    <i class="fa fa-user"></i>Vorname Nachname</a>
+                            </td>
+                            <td>
+                                <a class="icon" onclick="alert('Edit Popup')">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="margin-top:55px;">
+                        <button class="button button-highlight" name="submit" onclick="alert('HotSpot wurde hinzugefügt.')">
+                            <i class="fa fa-plus"></i>HotSpot Hinzufügen
+                        </button>
+                    </div>
                 </div>
-            </form>
-            <div class="search--background-image fx-transparent fx-blur"></div>
-        </section>
-        <section class="big-size secondary-background wrapper">
-            <div class="container">
-                <table>
-                    <tr>
-                        <th>HotSpot Name</th>
-                        <th>SSID</th>
-                        <th>Password</th>
-                        <th>Location/Radius</th>
-                        <th>Contact</th>
-                        <th>Edit</th>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem Ipsum</td>
-                        <td>Testoarma in da Hood</td>
-                        <td>CXjG2uD7dy4*3</td>
-                        <td><a href="www.google.de">Location/Radius</a></td>
-                        <td><a href="mailto:email">Vorname Nachname</a></td>
-                        <td><a class="icon" onclick="alert('Edit Popup')"><i class="fa fa-pencil-square-o"></i></a></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
+            </section>
         </div>
         <section id="map" class="full-big-size white-background wrapper">
             <div class="container">
                 <h2 class="primary">
-                Google Map!
+                    Google Map!
                 </h2>
             </div>
             <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9705.639985178996!2d13.34853305!3d52.5441083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1460458848356" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe> -->
@@ -143,22 +152,36 @@
         <section class="full-small-size cut-bottom white-background wrapper">
             <div class="container">
                 <form class="gs-960" method="post" action="" enctype="multipart/form-data">
-                    <input class="textfield" name="Hotspot Name" type="text" placeholder="Hotspot Name" />
-                    <input class="textfield" name="SSID" type="text" placeholder="Hotspot SSID" />
-                    <input class="textfield" name="Password" type="password" placeholder="Hotspot Password" />
-                    <input class="textfield" name="Radius" type="number" placeholder="Hotspot Radius" />
-                    <input class="textfield" name="Location" type="number" placeholder="Hotspot Location" />
-
-                    <input class="textfield" name="Contact" type="text" placeholder="Hotspot Owner" />
-                    <input class="textfield" name="Email" type="email" placeholder="Hotspot Owner EMail" />
+                    <div>
+                        <legend>
+                            Hotspot
+                        </legend>
+                        <input class="textfield" name="Hotspot Name" type="text" placeholder="Hotspot Name"/>
+                        <input class="textfield" name="SSID" type="text" placeholder="Hotspot SSID"/>
+                        <input class="textfield" name="Password" type="password" placeholder="Hotspot Password"/>
+                    </div>
+                    <div>
+                        <legend>
+                            Location
+                        </legend>
+                        <input class="textfield" name="Radius" type="number" placeholder="Hotspot Radius"/>
+                        <input class="textfield" name="Location" type="number" placeholder="Hotspot Location"/>
+                    </div>
+                    <div>
+                        <legend><center>
+                            Owner
+                        </center></legend>
+                        <input class="textfield" name="Contact" type="text" placeholder="Hotspot Owner"/>
+                        <input class="textfield" name="Email" type="email" placeholder="Hotspot Owner EMail"/>
+                    </div>
                     <button class="button button-primary" name="submit" onclick="alert('HotSpot wurde hinzugefügt.')">
-                        <i class="fa fa-plus"></i> Hinzufügen
+                        <i class="fa fa-plus"></i>Hinzufügen
                     </button>
                     <button class="button button-secondary" name="submit" onclick="alert('HotSpot wurde hinzugefügt.')">
-                        <i class="fa fa-plus"></i> Hinzufügen
+                        <i class="fa fa-plus"></i>Hinzufügen
                     </button>
                     <button class="button button-highlight" name="submit" onclick="alert('HotSpot wurde hinzugefügt.')">
-                        <i class="fa fa-plus"></i> Hinzufügen
+                        <i class="fa fa-plus"></i>Hinzufügen
                     </button>
                 </form>
             </div>
@@ -166,8 +189,10 @@
     </content>
     <footer class="wrapper">
         <div class="container">
-            <p class="footer primary">
-                Justo Cras Cursus Vestibulum
+            <p class="footer secondary">
+                Justo Cras Cursus Vestibulum -
+                <a onclick="alert('Email an die Person')">
+                    <i class="fa fa-user"></i>Vorname Nachname</a>
             </p>
         </div>
     </footer>
