@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <title>Test Project</title>
     <link rel="stylesheet" href="css/css.nested.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 </head>
 <body>
-    <header>
-        <div class="background-image header">
-            <h1 class="header">Hello World</h1>
+    <header class="background-image">
+        <h1 class="logo">HotSpots in Berlin</h1>
+        <h2 class="header">Ridiculus Pellentesque Adipiscing</h2>
+        <h3 class="header">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.</h3>
+    </div>
+</header>
+<content>
+    <section class="info">
+        <div class="infocontainer">
+            <div class="infocontainer item">
+                <div class="infocontainer item icon">
+                </div>
+                <p class="infocontainer item text"> Hello World</p>
+            </div>
+            <div class="infocontainer item">
+                <div class="infocontainer item icon">
+                </div>
+                <p class="infocontainer item text"> Hello World</p>
+            </div>
+            <div class="infocontainer item">
+                <div class="infocontainer item icon">
+                </div>
+                <p class="infocontainer item text"> Hello World</p>
+            </div>
+            <div class="infocontainer item">
+                <div class="infocontainer item icon">
+                </div>
+                <p class="infocontainer item text"> Hello World</p>
+            </div>
         </div>
-    </header>
-    <content>
-        <section class="info">
-            <div>
-                test 1
-            </div>
-            <div>
-                test 2
-            </div>
-            <div>
-                test3
-            </div>
+    </section>
+    <section class="inner">
+        <section>
+            <form class="pure-form" method="post" action="" enctype="multipart/form-data">
+                <input name="Hotspot Name" type="text" placeholder="Hotspot Name"/>
+                <button class="pure-button pure-button-primary">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
         </section>
-        <section class="inner">
-            <section>
-                <form method="post" action="" enctype="multipart/form-data">
-                    <input class="textfield" name="Hotspot Name" type="text" placeholder="Hotspot Name"/>
-                    <input class="button" type="submit" name="submit" value="Suchen" onclick="alert('Suche gestartet')"/>
-                </form>
-            </section>
-            <table>
+        <table  class="pure-table pure-table-horizontal">
+            <thead>
                 <tr>
                     <th>HotSpot Name</th>
                     <th>SSID</th>
@@ -43,6 +61,9 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
+            </thead>
+            <tbody>
+
                 <tr>
                     <td>Lorem Ipsum</td>
                     <td>Testoarma in da Hood</td>
@@ -50,38 +71,18 @@
                     <td>CXjG2uD7dy4*3</td>
                     <td><a href="mailto:email">Vorname Nachname</a></td>
                     <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
                 </tr>
-                <tr>
+                <tr class="pure-table-odd">
                     <td>Pharetra Parturient</td>
                     <td>Mattis Inceptos Fringilla Nullam</td>
                     <td><a href="">Location/Radius</a></td>
                     <td>bm2zuXDu6B]68</td>
                     <td><a href="mailto:email">Vorname Nachname</a></td>
                     <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>Lorem Ipsum</td>
-                    <td>Testoarma in da Hood</td>
-                    <td><a href="">Location/Radius</a></td>
-                    <td>CXjG2uD7dy4*3</td>
-                    <td><a href="mailto:email">Vorname Nachname</a></td>
-                    <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>Pharetra Parturient</td>
-                    <td>Mattis Inceptos Fringilla Nullam</td>
-                    <td><a href="">Location/Radius</a></td>
-                    <td>bm2zuXDu6B]68</td>
-                    <td><a href="mailto:email">Vorname Nachname</a></td>
-                    <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
                 </tr>
                 <tr>
                     <td>Lorem Ipsum</td>
@@ -90,8 +91,28 @@
                     <td>CXjG2uD7dy4*3</td>
                     <td><a href="mailto:email">Vorname Nachname</a></td>
                     <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td>Pharetra Parturient</td>
+                    <td>Mattis Inceptos Fringilla Nullam</td>
+                    <td><a href="">Location/Radius</a></td>
+                    <td>bm2zuXDu6B]68</td>
+                    <td><a href="mailto:email">Vorname Nachname</a></td>
+                    <td></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td>Lorem Ipsum</td>
+                    <td>Testoarma in da Hood</td>
+                    <td><a href="">Location/Radius</a></td>
+                    <td>CXjG2uD7dy4*3</td>
+                    <td><a href="mailto:email">Vorname Nachname</a></td>
+                    <td></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
                 </tr>
                 <tr>
                     <td>Pharetra Parturient</td>
@@ -100,22 +121,39 @@
                     <td>bm2zuXDu6B]68</td>
                     <td><a href="mailto:email">Vorname Nachname</a></td>
                     <td></td>
-                    <td><a href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
+                    <td><a href=""><i class="fa fa-minus-square-o"></a></td>
                 </tr>
-            </table>
-        </section>
-        <section class="inner">
-            <form class="add" method="post" action="" enctype="multipart/form-data">
-                <input class="textfield" name="Hotspot Name" type="text" placeholder="Hotspot Name"/>
-                <input class="textfield" name="SSID" type="text" placeholder="Hotspot SSID"/>
-                <input class="textfield" name="Password" type="password" placeholder="Hotspot Password"/>
-                <input class="textfield" name="Radius" type="number" placeholder="Hotspot Radius"/>
-                <input class="textfield" name="Location" type="number" placeholder="Hotspot Location"/>
-            </br>
-            <input class="textfield" name="Contact" type="text" placeholder="Hotspot Owner"/>
-            <input class="textfield" name="Email" type="email" placeholder="Hotspot Owner EMail"/>
-            <input class="button" type="submit" name="submit" value="HotSpot Hinzufügen" onclick="alert('Neuer Hotspot Hinzugefügt')"/>
+            </tbody>
+
+        </table>
+    </section>
+    <section class="inner">
+        <form class="pure-form">
+            <fieldset>
+                <legend>A compact inline form</legend>
+                <div style="padding-top:10px;">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="email" placeholder="Email">
+                </div>
+                <legend>A compact inline form</legend>
+                <div style="padding-top:10px;">
+
+                    <input type="password" placeholder="Password">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <label for="remember">
+                        <input id="remember" type="checkbox"> Remember me
+                    </label>
+                </div>
+                <div style="padding-top:10px;">
+                    <button type="submit" class="pure-button pure-button-primary">
+                        <i class="fa fa-search"></i>
+                        Sign in
+                    </button>
+                </div>
+            </fieldset>
         </form>
     </section>
     <section class="card">

@@ -24,16 +24,36 @@ section {
         margin: 0 auto;
     }
     &.info {
-        display: flex;
-        justify-content: center;
+        width: 960px;
+        height: 350px;
+        margin: 0 auto;
     }
 }
-.background-image {
+.infocontainer {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    top: 8%;
+    &.item {
+        text-align: center;
+        padding: 10px;
+        display: block;
+        &.icon {
+            width: 160px;
+            height: 160px;
+            background-color: red;
+        }
+        &.text {
+            padding: 10px 0;
+        }
+    }
+}
+header {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 550px;
     background-size: cover;
-    &.header {
+    &.background-image {
         background-image: url("../img/RG__1483.jpg");
     }
 }
@@ -41,11 +61,35 @@ section {
 h1 {
     color: $color2;
     text-transform: uppercase;
-    font-weight: 300;
-    &.header {
+    font-weight: 500;
+    font-size: 1.5em;
+    &.logo {
         position: absolute;
-        top: 50%;
-        left: 50px;
+        left: 35px;
+        top: 35px;
+
+    }
+}
+h2 {
+    color: $color2;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    &.header {
+        text-align: center;
+        position: relative;
+        top: 70%;
+    }
+}
+h3 {
+    color: $color2;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1em;
+    &.header {
+        text-align: center;
+        position: relative;
+        top: 70%;
     }
 }
 table {
@@ -60,34 +104,27 @@ td, th {
     border: lighten($color0, 85%) solid 1px;
     background-color: lighten($color0, 95%);
 }
-form.add {
-    justify-content: space-between;
-    display: flex;
+
+.cut-top {
+	content: ' ';
+	position: absolute;
+	z-index: 1;
+	top: -80px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 80px solid transparent;
+	border-right: 30px solid white;
 }
-input.button {
-    border: 0;
-    text-align: left;
-    margin: 5px 0;
-    padding: 8px 15px;
-    color: $color2;
-    background-color: lighten($color1, 35%);
-    border: $color1 solid 1px;
-}
-input.textfield {
-    border: 0;
-    text-align: left;
-    margin: 5px 0;
-    padding: 8px 8px;
-    color: $color0;
-    border: lighten($color0, 85%) solid 1px;
-    background-color: lighten($color0, 95%);
-    &:focus {
-        background-color: lighten($color0, 85%);
-    }
-    &:placeholder-shown {
-        color: lighten($color0, 35%) !important;
-    }
-    &::-webkit-input-placeholder {
-        color: lighten($color0, 35%) !important;
-    }
+
+.cut-bottom {
+	content: ' ';
+	position: absolute;
+	z-index: 1;
+	bottom: -80px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 80px solid transparent;
+	border-left: 30px solid white;
 }
