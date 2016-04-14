@@ -39,26 +39,22 @@ html {
 /* Fonts
 -----------------------------------------------------------------------
 */
-a:link {
-    color: #0D47A1;
+a {
+    color: $highlight;
     text-decoration: none;
-    border-bottom: 2px solid #BBDEFB;
-    box-shadow: inset 0 0 0 0 #F5F5F5;
+    border-bottom: 2px solid $highlight;
     padding-left: 3px;
     padding-right: 3px;
-    transition: all 0.5s ease-in;
-    &:visited {
-        color: #0D47A1;
-        text-decoration: none;
-        border-bottom: 2px solid #BBDEFB;
-    }
+    cursor: pointer;
     &:hover {
-        color: #2196F3;
+        color: $primary;
         text-decoration: none;
-        border-bottom: 2px solid #2196F3;
-        box-shadow: inset 0 -100px 0 0 #F5F5F5;
+        border-bottom: 2px solid $primary;
         padding-left: 3px;
         padding-right: 3px;
+    }
+    &.icon {
+        border-bottom: 0;
     }
 }
 h1 {
