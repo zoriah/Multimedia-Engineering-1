@@ -1,4 +1,9 @@
-
+/*
+* @Stefan Mairbaeurl - 2016
+*
+* Multimedia-Engineering 1 - Übung
+*
+*/
 
 WLAN HotSpots
 
