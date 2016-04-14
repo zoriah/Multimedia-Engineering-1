@@ -2,24 +2,41 @@
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  -webkit-margin-start: 0px; }
+  -webkit-margin-start: 0; }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: #000000;
+  background-color: #F5F5F5;
   margin: 0 auto;
   padding: 0;
-  width: 100%; }
+  width: 1440px; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background-size: cover; }
+  header.background-image {
+    background-image: url("../img/RG__1483.jpg"); }
+
+.cut-buttom {
+  clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0); }
 
 section {
-  padding: 15px 0; }
-  section.inner {
-    width: 960px;
-    margin: 0 auto; }
-  section.info {
-    width: 960px;
-    height: 350px;
-    margin: 0 auto; }
+  width: 960px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+  section.big-size {
+    height: 250px; }
+  section.full-size {
+    width: 100%;
+    height: 550px; }
+  section.background-color {
+    background-color: #00BCD4; }
 
 .infocontainer {
   display: flex;
@@ -33,20 +50,14 @@ section {
     .infocontainer.item.icon {
       width: 160px;
       height: 160px;
-      background-color: red; }
+      border-radius: 120px;
+      background-color: #00BCD4; }
     .infocontainer.item.text {
+      width: 280px;
       padding: 10px 0; }
 
-header {
-  position: relative;
-  width: 100%;
-  height: 550px;
-  background-size: cover; }
-  header.background-image {
-    background-image: url("../img/RG__1483.jpg"); }
-
 h1 {
-  color: #ffffff;
+  color: #F5F5F5;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5em; }
@@ -56,7 +67,7 @@ h1 {
     top: 35px; }
 
 h2 {
-  color: #ffffff;
+  color: #F5F5F5;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.5em; }
@@ -66,7 +77,7 @@ h2 {
     top: 70%; }
 
 h3 {
-  color: #ffffff;
+  color: #F5F5F5;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1em; }
@@ -80,31 +91,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td, th {
+td,
+th {
   vertical-align: baseline;
   text-align: left;
   padding: 5px;
   border: #d9d9d9 solid 1px;
   background-color: #f2f2f2; }
-
-.cut-top {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  top: -80px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 80px solid transparent;
-  border-right: 30px solid white; }
-
-.cut-bottom {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  bottom: -80px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 80px solid transparent;
-  border-left: 30px solid white; }
