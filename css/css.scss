@@ -10,13 +10,23 @@ $white: #ffffff;
 $primary: #34465d;
 $secondary: #EEEEEE;
 $highlight: #FF7043;
+/* Wrapper und Body
+-----------------------------------------------------------------------
+*/
+.wrapper {
+    // width: 100%;
+    height: 100%;
+    display: table;
+}
+.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 * {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
-}
-:focus {
-    outline: 0;
 }
 html {
     font-family: 'Open Sans', sans-serif;
@@ -26,22 +36,62 @@ html {
     padding: 0;
     width: 1440px;
 }
-body.logo {
-    width: 960px;
-}
-@media only screen and (max-width: 1440px) {
-    html {
-        width: 100%;
+/* Fonts
+-----------------------------------------------------------------------
+*/
+a:link {
+    color: #0D47A1;
+    text-decoration: none;
+    border-bottom: 2px solid #BBDEFB;
+    box-shadow: inset 0 0 0 0 #F5F5F5;
+    padding-left: 3px;
+    padding-right: 3px;
+    transition: all 0.5s ease-in;
+    &:visited {
+        color: #0D47A1;
+        text-decoration: none;
+        border-bottom: 2px solid #BBDEFB;
+    }
+    &:hover {
+        color: #2196F3;
+        text-decoration: none;
+        border-bottom: 2px solid #2196F3;
+        box-shadow: inset 0 -100px 0 0 #F5F5F5;
+        padding-left: 3px;
+        padding-right: 3px;
     }
 }
-header {
-    position: relative;
-    width: 100%;
-    &.background-image {
-        height: 550px;
-        background-size: cover;
-        background-image: url("../img/photo-1440492248262-6895f9da82fc.jpg");
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    &.logo {
+        position: absolute;
+        left: 35px;
+        top: 35px;
     }
+}
+h2 {
+    // text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+h3 {
+    // text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+i {
+    &.info-icon {
+        position: relative;
+        top: 35px;
+    }
+}
+/* Coloring and Styling Elements
+-----------------------------------------------------------------------
+*/
+:focus {
+    outline: 0;
 }
 .blur {
     -webkit-filter: blur(3px);
@@ -68,36 +118,6 @@ header {
 .text-shadow {
     text-shadow: 2px 2px 10px lighten($black,65%);
 }
-h1 {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5em;
-    &.logo {
-        position: absolute;
-        left: 35px;
-        top: 35px;
-    }
-}
-h2 {
-    // text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-}
-h3 {
-    // text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1.2em;
-}
-.wrapper {
-    width: 100%;
-    height: 100%;
-    display: table;
-}
-.container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
 .cut-top {
     clip-path: polygon(0 20%, 0 100%, 100% 100%, 100% 0);
     -webkit-clip-path: polygon(0 20%, 0 100%, 100% 100%, 100% 0);
@@ -105,6 +125,11 @@ h3 {
 .cut-buttom {
     clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
+}
+@media only screen and (max-device-width: 426px) {
+    h1 {
+        font-size: 1.2em;
+    }
 }
 @media only screen and (max-device-width: 769px) {
     h1 {
@@ -115,11 +140,38 @@ h3 {
         }
     }
     .cut-top {
-        transition: all .5s ease-in;
+        transition: all 0.5s ease-in;
         clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0);
         -webkit-clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0);
     }
 }
+/* Logo
+-----------------------------------------------------------------------
+*/
+.logo {
+    position: absolute;
+    width: 450px;
+}
+@media only screen and (max-width: 1440px) {
+    html {
+        width: 100%;
+    }
+}
+/* Header Element
+-----------------------------------------------------------------------
+*/
+header {
+    position: relative;
+    width: 100%;
+    &.background-image {
+        height: 550px;
+        background-size: cover;
+        background-image: url("../img/photo-1440492248262-6895f9da82fc.jpg");
+    }
+}
+/* Section Definiert
+-----------------------------------------------------------------------
+*/
 section {
     width: 960px;
     height: 350px;
@@ -140,6 +192,9 @@ section {
         background-color: $primary;
     }
 }
+/* Info Section
+-----------------------------------------------------------------------
+*/
 .infocontainer {
     display: flex;
     justify-content: center;
@@ -161,7 +216,7 @@ section {
         }
     }
 }
-@media only screen and (max-device-width: 769px) {
+@media only screen and (max-device-width: 767px) {
     .infocontainer {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -169,6 +224,28 @@ section {
         width: auto;
     }
 }
+/* Table
+-----------------------------------------------------------------------
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    background-color: $highlight;
+    color: white;
+}
+td,
+th {
+    height: 50px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: lighten($black, 85%) solid 1px;
+}
+/* Input
+-----------------------------------------------------------------------
+*/
 input.big-search {
     padding: 5px;
     font-size: 37px;
@@ -219,25 +296,4 @@ button.button {
         color: $black;
         background-color: $secondary;
     }
-}
-i {
-    &.info-icon {
-        position: relative;
-        top: 35px;
-    }
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-th {
-    background-color: lighten($primary, 45%);
-}
-td,
-th {
-    height: 50px;
-    text-align: left;
-    padding: 5px;
-    border: lighten($black, 85%) solid 1px;
 }
