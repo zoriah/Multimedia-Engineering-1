@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+$color0: #000000;
+$color1: #ff0000;
+$color2: #ffffff;
+
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $color0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+section {
+    padding: 15px 0;
+    &.inner {
+        width: 960px;
+        margin: 0 auto;
+    }
+    &.info {
+        display: flex;
+        justify-content: center;
+    }
+}
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    &.header {
+        background-image: url("../img/RG__1483.jpg");
+    }
+}
+
+h1 {
+    color: $color2;
+    text-transform: uppercase;
+    font-weight: 300;
+    &.header {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    vertical-align: baseline;
+    text-align: left;
+    padding: 5px;
+    border: lighten($color0, 85%) solid 1px;
+    background-color: lighten($color0, 95%);
+}
+form.add {
+    justify-content: space-between;
+    display: flex;
+}
+input.button {
+    border: 0;
+    text-align: left;
+    margin: 5px 0;
+    padding: 8px 15px;
+    color: $color2;
+    background-color: lighten($color1, 35%);
+    border: $color1 solid 1px;
+}
+input.textfield {
+    border: 0;
+    text-align: left;
+    margin: 5px 0;
+    padding: 8px 8px;
+    color: $color0;
+    border: lighten($color0, 85%) solid 1px;
+    background-color: lighten($color0, 95%);
+    &:focus {
+        background-color: lighten($color0, 85%);
+    }
+    &:placeholder-shown {
+        color: lighten($color0, 35%) !important;
+    }
+    &::-webkit-input-placeholder {
+        color: lighten($color0, 35%) !important;
+    }
+}

@@ -1,0 +1,18 @@
+
+
+WLAN HotSpots
+
+
+Datenbank
+Location - Integer (Geo-Koordinaten)
+HotSpotName - String (Name)
+SSID - String (SSID)
+Password - String (Password) - löscht sich nach 3 tagen
+Strength- Integer
+Contact_Name - String (Name)
+Contact_Mail - String (E-Mail)
+Add_Date - Date
+
+
+
+mme1b223
