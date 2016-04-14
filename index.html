@@ -13,45 +13,57 @@
 <body>
 
     <header class="background-image cut-buttom">
-        <h1 class="logo">HotSpots in Berlin</h1>
-        <h2 class="header">Ridiculus Pellentesque Adipiscing</h2>
-        <h3 class="header">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.</h3>
+        <h1 class="logo secondary"><i class="fa fa-wifi secondary"></i> HotSpots in Berlin</h1>
+        <h2 class="header secondary">Ridiculus Pellentesque Adipiscing</h2>
+        <h3 class="header secondary">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.</h3>
         </div>
     </header>
 
     <content>
-
-        <section>
-            <div class="infocontainer">
-                <div class="infocontainer item">
-                    <div class="infocontainer item icon cut-buttom">
+        <section class="full-size wrapper">
+            <div class="container">
+                <div class="infocontainer">
+                    <div class="infocontainer item">
+                        <div class="infocontainer item icon cut-buttom">
+                            <i class="fa fa-search fa-5x info-icon secondary"></i>
+                        </div>
+                        <p class="infocontainer item text">Curabitur blandit tempus porttitor.</p>
                     </div>
-                    <p class="infocontainer item text">Curabitur blandit tempus porttitor.</p>
-                </div>
-                <div class="infocontainer item">
-                    <div class="infocontainer item icon cut-buttom">
+                    <div class="infocontainer item">
+                        <div class="infocontainer item icon cut-buttom">
+                            <i class="fa fa-map-marker fa-5x info-icon secondary"></i>
+                        </div>
+                        <p class="infocontainer item text">Sed posuere consectetur est at lobortis.</p>
                     </div>
-                    <p class="infocontainer item text">Sed posuere consectetur est at lobortis.</p>
-                </div>
-                <div class="infocontainer item">
-                    <div class="infocontainer item icon cut-buttom">
+                    <div class="infocontainer item">
+                        <div class="infocontainer item icon cut-buttom">
+                            <i class="fa fa-cog fa-spin fa-5x info-icon secondary"></i>
+                        </div>
+                        <p class="infocontainer item text">Maecenas faucibus mollis interdum.</p>
                     </div>
-                    <p class="infocontainer item text">Maecenas faucibus mollis interdum.</p>
-                </div>
-                <div class="infocontainer item">
-                    <div class="infocontainer item icon cut-buttom">
+                    <div class="infocontainer item">
+                        <div class="infocontainer item icon cut-buttom">
+                            <i class="fa fa-refresh fa-spin fa-5x info-icon secondary"></i>
+                        </div>
+                        <p class="infocontainer item text">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
                     </div>
-                    <p class="infocontainer item text">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
                 </div>
             </div>
         </section>
-        <section class="big-size">
-            <form class="pure-form" method="post" action="" enctype="multipart/form-data">
-                <input name="Hotspot Name" type="text" placeholder="Hotspot Name" />
-                <button class="pure-button pure-button-primary">
-                    <i class="fa fa-search"></i>
-                </button>
+        <section class="full-size background-color">
+            <form class="wrapper" method="post" action="" enctype="multipart/form-data">
+                <div class="container">
+                    <h2 class="secondary">
+                    Search your next
+                    <input class="big-search" name="Hotspot Name" type="text" placeholder="Hotspot" />
+                    <button class="button button-primary">
+                        <i class="fa fa-search fa-3x"></i>
+                    </button>
+                    </h2>
+                </div>
             </form>
+        </section>
+        <section class="big-size">
             <table>
                 <tr>
                     <th>HotSpot Name</th>
