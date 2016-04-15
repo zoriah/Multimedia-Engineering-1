@@ -14,7 +14,7 @@ $highlight: #FF7043;
 -----------------------------------------------------------------------
 */
 .wrapper {
-    // width: 100%;
+    width: 100%;
     height: 100%;
     display: table;
 }
@@ -24,11 +24,13 @@ $highlight: #FF7043;
     vertical-align: middle;
 }
 * {
+    // transition: all 0.5s ease-in;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
 }
-html, body {
+body,
+html {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: $black;
@@ -52,9 +54,9 @@ a {
     padding-right: 3px;
     cursor: pointer;
     &:hover {
-        color: darken($highlight, 5%);
+        color: darken($highlight, 15%);
         text-decoration: none;
-        border-bottom: 2px solid darken($highlight, 5%);
+        border-bottom: 2px solid darken($highlight, 15%);
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -63,24 +65,39 @@ a {
     }
 }
 h1 {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5em;
-    &.logo {
-        position: absolute;
-        left: 35px;
-        top: 35px;
-    }
+    font-weight: 400;
+    font-size: 2.5em;
 }
 h2 {
     // text-transform: uppercase;
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 h3 {
     // text-transform: uppercase;
     font-weight: 400;
+    font-size: 1.5em;
+}
+h4 {
+    // text-transform: uppercase;
+    font-weight: 400;
     font-size: 1.2em;
+}
+h5 {
+    // text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.0em;
+}
+h6 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    &.logo {
+        transition: 0 !important;
+        position: absolute;
+        left: 35px;
+        top: 35px;
+    }
 }
 i {
     &.info-icon {
@@ -140,13 +157,9 @@ i {
     clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
     -webkit-clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
 }
-@media only screen and (max-device-width: 426px) {
-    h1 {
+@media only screen and (max-width: 769px) {
+    h6 {
         font-size: 1.2em;
-    }
-}
-@media only screen and (max-device-width: 769px) {
-    h1 {
         &.logo {
             position: absolute;
             left: 15px;
@@ -154,9 +167,16 @@ i {
         }
     }
     .cut-top {
-        transition: all 0.5s ease-in;
-        clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0);
-        -webkit-clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0);
+        clip-path: polygon(0% 15%, -13% 100%, 100% 100%, 100% 2%);
+        -webkit-clip-path: polygon(0% 15%, -13% 100%, 100% 100%, 100% 2%);
+    }
+    .cut-top-bottom {
+        clip-path: polygon(0% 20%, -3% 100%, 100% 85%, 150% 2%);
+        -webkit-clip-path: polygon(0% 20%, -3% 100%, 100% 85%, 150% 2%);
+    }
+    .cut-bottom {
+        clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
+        -webkit-clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
     }
 }
 /* Logo
@@ -180,14 +200,12 @@ header {
         background-image: url("../img/photo-1440492248262-6895f9da82fc.jpg");
     }
 }
-
 /* footer Element
 -----------------------------------------------------------------------
 */
 .footer {
-    padding: 15px 0 25px 0;
+    padding: 15px 0 25px;
 }
-
 /* background-images
 -----------------------------------------------------------------------
 */
@@ -207,7 +225,9 @@ header {
 /* Section Definiert
 -----------------------------------------------------------------------
 */
-header, section, footer {
+footer,
+header,
+section {
     position: relative;
     top: 15px;
     margin: 0 auto;
@@ -260,7 +280,7 @@ header, section, footer {
         }
     }
 }
-@media only screen and (max-device-width: 767px) {
+@media only screen and (max-width: 900px) {
     .infocontainer {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -282,6 +302,9 @@ th {
     color: white;
 }
 tr:hover {
+    background-color: lighten($primary, 10%);
+}
+tr:nth-child(odd) {
     background-color: lighten($primary, 5%);
 }
 td,
@@ -290,6 +313,64 @@ th {
     text-align: left;
     padding: 5px;
     border-bottom: lighten($primary, 15%) solid 1px;
+    // float: left;
+    &.name {
+        width: 25%;
+    }
+    &.ssid {
+        width: 30%;
+    }
+    &.password {
+        width: 20%;
+    }
+    &.location {
+        width: 15%;
+    }
+    &.person {
+        width: 30%;
+    }
+    &.edit {
+        width: 5%;
+    }
+}
+@media only screen and (min-width:319px) and (max-width: 960px) {
+    table,
+    tbody,
+    td,
+    th,
+    thead,
+    tr {
+        width: 95%;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        padding: 10px 15px;
+        &.ssid, .password, .location, .person, .edit {
+            width: 100%;
+        }
+    }
+
+    thead {
+        tr {
+            display: none;
+        }
+    }
+    th {
+        background-color: darken($primary, 5%);
+        color: white;
+    }
+    tr:nth-child(odd) {
+        background-color: lighten($primary, 5%);
+    }
+    td {
+        padding: 5px;
+        &:before {
+            content: attr(data-label);
+            display: inline-block;
+            font-weight: bold;
+            width: 100px;
+        }
+    }
 }
 /* Input
 -----------------------------------------------------------------------
@@ -316,7 +397,8 @@ input.big-search {
     }
 }
 input.textfield {
-    margin: 0 0 6px 0;
+    border-radius: 3px;
+    margin: 0 0 6px;
     padding: 10px 15px;
     font-size: 1em;
     width: 280px;
@@ -343,6 +425,7 @@ button.button {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 1em;
+    border-radius: 3px;
     &:hover {
         background-color: darken($secondary, 35%);
     }
@@ -364,7 +447,7 @@ button.button {
         color: $white;
         background-color: $highlight;
         &:hover {
-            background-color: darken($highlight, 5%);
+            background-color: darken($highlight, 15%);
         }
     }
     &.button-search {

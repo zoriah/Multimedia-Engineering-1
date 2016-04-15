@@ -10,6 +10,7 @@
 -----------------------------------------------------------------------
 */
 .wrapper {
+  width: 100%;
   height: 100%;
   display: table; }
 
@@ -23,7 +24,8 @@
   -webkit-margin-after: 0;
   -webkit-margin-start: 0; }
 
-html, body {
+body,
+html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: #000000;
@@ -45,30 +47,43 @@ a {
   padding-right: 3px;
   cursor: pointer; }
   a:hover {
-    color: #ff5d2a;
+    color: #f63b00;
     text-decoration: none;
-    border-bottom: 2px solid #ff5d2a;
+    border-bottom: 2px solid #f63b00;
     padding-left: 3px;
     padding-right: 3px; }
   a.icon {
     border-bottom: 0; }
 
 h1 {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.5em; }
-  h1.logo {
-    position: absolute;
-    left: 35px;
-    top: 35px; }
-
-h2 {
   font-weight: 400;
   font-size: 2.5em; }
 
+h2 {
+  font-weight: 400;
+  font-size: 2em; }
+
 h3 {
   font-weight: 400;
+  font-size: 1.5em; }
+
+h4 {
+  font-weight: 400;
   font-size: 1.2em; }
+
+h5 {
+  font-weight: 400;
+  font-size: 1.0em; }
+
+h6 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5em; }
+  h6.logo {
+    transition: 0 !important;
+    position: absolute;
+    left: 35px;
+    top: 35px; }
 
 i.info-icon {
   position: relative;
@@ -126,19 +141,22 @@ i.info-icon {
   clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
   -webkit-clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%); }
 
-@media only screen and (max-device-width: 426px) {
-  h1 {
-    font-size: 1.2em; } }
-
-@media only screen and (max-device-width: 769px) {
-  h1.logo {
-    position: absolute;
-    left: 15px;
-    top: 35px; }
+@media only screen and (max-width: 769px) {
+  h6 {
+    font-size: 1.2em; }
+    h6.logo {
+      position: absolute;
+      left: 15px;
+      top: 35px; }
   .cut-top {
-    transition: all 0.5s ease-in;
-    clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0);
-    -webkit-clip-path: polygon(0 20%, 0 100%, 100% 100%, 300% 0); } }
+    clip-path: polygon(0% 15%, -13% 100%, 100% 100%, 100% 2%);
+    -webkit-clip-path: polygon(0% 15%, -13% 100%, 100% 100%, 100% 2%); }
+  .cut-top-bottom {
+    clip-path: polygon(0% 20%, -3% 100%, 100% 85%, 150% 2%);
+    -webkit-clip-path: polygon(0% 20%, -3% 100%, 100% 85%, 150% 2%); }
+  .cut-bottom {
+    clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, -13% 100%, 100% 85%, 100% 0%); } }
 
 /* Logo
 -----------------------------------------------------------------------
@@ -162,7 +180,7 @@ header.background-image {
 -----------------------------------------------------------------------
 */
 .footer {
-  padding: 15px 0 25px 0; }
+  padding: 15px 0 25px; }
 
 /* background-images
 -----------------------------------------------------------------------
@@ -182,28 +200,42 @@ header.background-image {
 /* Section Definiert
 -----------------------------------------------------------------------
 */
-header, section, footer {
+footer,
+header,
+section {
   position: relative;
   top: 15px;
   margin: 0 auto;
   display: flex;
   justify-content: center; }
-  header.header-size, section.header-size, footer.header-size {
+  footer.header-size,
+  header.header-size,
+  section.header-size {
     width: 100%;
     height: 700px; }
-  header.small-size, section.small-size, footer.small-size {
+  footer.small-size,
+  header.small-size,
+  section.small-size {
     width: 960px;
     height: 350px; }
-  header.full-small-size, section.full-small-size, footer.full-small-size {
+  footer.full-small-size,
+  header.full-small-size,
+  section.full-small-size {
     width: 100%;
     height: 350px; }
-  header.big-size, section.big-size, footer.big-size {
+  footer.big-size,
+  header.big-size,
+  section.big-size {
     width: 960px;
     height: 550px; }
-  header.full-big-size, section.full-big-size, footer.full-big-size {
+  footer.full-big-size,
+  header.full-big-size,
+  section.full-big-size {
     width: 100%;
     height: 550px; }
-  header.background-color, section.background-color, footer.background-color {
+  footer.background-color,
+  header.background-color,
+  section.background-color {
     background-color: #34465d; }
 
 /* Info Section
@@ -226,7 +258,7 @@ header, section, footer {
       width: 280px;
       padding: 10px 0; }
 
-@media only screen and (max-device-width: 767px) {
+@media only screen and (max-width: 900px) {
   .infocontainer {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -247,6 +279,9 @@ th {
   color: white; }
 
 tr:hover {
+  background-color: #465f7e; }
+
+tr:nth-child(odd) {
   background-color: #3d526d; }
 
 td,
@@ -255,6 +290,78 @@ th {
   text-align: left;
   padding: 5px;
   border-bottom: #4f6b8e solid 1px; }
+  td.name,
+  th.name {
+    width: 25%; }
+  td.ssid,
+  th.ssid {
+    width: 30%; }
+  td.password,
+  th.password {
+    width: 20%; }
+  td.location,
+  th.location {
+    width: 15%; }
+  td.person,
+  th.person {
+    width: 30%; }
+  td.edit,
+  th.edit {
+    width: 5%; }
+
+@media only screen and (min-width: 319px) and (max-width: 960px) {
+  table,
+  tbody,
+  td,
+  th,
+  thead,
+  tr {
+    width: 95%;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    padding: 10px 15px; }
+    table.ssid, table .password, table .location, table .person, table .edit,
+    tbody.ssid,
+    tbody .password,
+    tbody .location,
+    tbody .person,
+    tbody .edit,
+    td.ssid,
+    td .password,
+    td .location,
+    td .person,
+    td .edit,
+    th.ssid,
+    th .password,
+    th .location,
+    th .person,
+    th .edit,
+    thead.ssid,
+    thead .password,
+    thead .location,
+    thead .person,
+    thead .edit,
+    tr.ssid,
+    tr .password,
+    tr .location,
+    tr .person,
+    tr .edit {
+      width: 100%; }
+  thead tr {
+    display: none; }
+  th {
+    background-color: #2b3a4d;
+    color: white; }
+  tr:nth-child(odd) {
+    background-color: #3d526d; }
+  td {
+    padding: 5px; }
+    td:before {
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: bold;
+      width: 100px; } }
 
 /* Input
 -----------------------------------------------------------------------
@@ -275,7 +382,8 @@ input.big-search {
     color: #34465d !important; }
 
 input.textfield {
-  margin: 0 0 6px 0;
+  border-radius: 3px;
+  margin: 0 0 6px;
   padding: 10px 15px;
   font-size: 1em;
   width: 280px;
@@ -294,7 +402,8 @@ button.button {
   color: #ffffff;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 1em; }
+  font-size: 1em;
+  border-radius: 3px; }
   button.button:hover {
     background-color: #959595; }
   button.button.button-primary {
@@ -311,7 +420,7 @@ button.button {
     color: #ffffff;
     background-color: #FF7043; }
     button.button.button-highlight:hover {
-      background-color: #ff5d2a; }
+      background-color: #f63b00; }
   button.button.button-search {
     color: #EEEEEE;
     background-color: transparent;
