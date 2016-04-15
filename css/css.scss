@@ -306,6 +306,9 @@ tr:hover {
 }
 tr:nth-child(odd) {
     background-color: lighten($primary, 5%);
+    &:hover {
+        background-color: lighten($primary, 10%);
+    }
 }
 td,
 th {
@@ -313,7 +316,6 @@ th {
     text-align: left;
     padding: 5px;
     border-bottom: lighten($primary, 15%) solid 1px;
-    // float: left;
     &.name {
         width: 25%;
     }
@@ -334,42 +336,21 @@ th {
     }
 }
 @media only screen and (min-width:319px) and (max-width: 960px) {
-    table,
-    tbody,
-    td,
-    th,
-    thead,
-    tr {
-        width: 95%;
-        text-align: left;
-        display: block;
-        overflow: hidden;
-        padding: 10px 15px;
-        &.ssid, .password, .location, .person, .edit {
-            width: 100%;
-        }
+    table {
+        display: none;
     }
+}
 
-    thead {
-        tr {
-            display: none;
-        }
-    }
-    th {
-        background-color: darken($primary, 5%);
-        color: white;
-    }
-    tr:nth-child(odd) {
-        background-color: lighten($primary, 5%);
-    }
-    td {
-        padding: 5px;
-        &:before {
-            content: attr(data-label);
-            display: inline-block;
-            font-weight: bold;
-            width: 100px;
-        }
+
+
+/* Hinzufügen
+-----------------------------------------------------------------------
+*/
+
+
+@media only screen and (min-width:319px) and (max-width: 960px) {
+    form {
+        display: none;
     }
 }
 /* Input

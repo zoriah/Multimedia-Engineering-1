@@ -283,6 +283,8 @@ tr:hover {
 
 tr:nth-child(odd) {
   background-color: #3d526d; }
+  tr:nth-child(odd):hover {
+    background-color: #465f7e; }
 
 td,
 th {
@@ -310,58 +312,15 @@ th {
     width: 5%; }
 
 @media only screen and (min-width: 319px) and (max-width: 960px) {
-  table,
-  tbody,
-  td,
-  th,
-  thead,
-  tr {
-    width: 95%;
-    text-align: left;
-    display: block;
-    overflow: hidden;
-    padding: 10px 15px; }
-    table.ssid, table .password, table .location, table .person, table .edit,
-    tbody.ssid,
-    tbody .password,
-    tbody .location,
-    tbody .person,
-    tbody .edit,
-    td.ssid,
-    td .password,
-    td .location,
-    td .person,
-    td .edit,
-    th.ssid,
-    th .password,
-    th .location,
-    th .person,
-    th .edit,
-    thead.ssid,
-    thead .password,
-    thead .location,
-    thead .person,
-    thead .edit,
-    tr.ssid,
-    tr .password,
-    tr .location,
-    tr .person,
-    tr .edit {
-      width: 100%; }
-  thead tr {
-    display: none; }
-  th {
-    background-color: #2b3a4d;
-    color: white; }
-  tr:nth-child(odd) {
-    background-color: #3d526d; }
-  td {
-    padding: 5px; }
-    td:before {
-      content: attr(data-label);
-      display: inline-block;
-      font-weight: bold;
-      width: 100px; } }
+  table {
+    display: none; } }
+
+/* Hinzufügen
+-----------------------------------------------------------------------
+*/
+@media only screen and (min-width: 319px) and (max-width: 960px) {
+  form {
+    display: none; } }
 
 /* Input
 -----------------------------------------------------------------------
